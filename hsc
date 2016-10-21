@@ -19,74 +19,77 @@ help_text="\
         -h, --help      Print this help.
 "
 
+info() {
+    printf "\n\t$1\n\t$2\n\n"
+}
 
 while (( "$#" )); do
     case $1 in
         # informational
-        100) echo "Continue"; shift ;;
-        101) echo ""; shift ;;
-        102) echo ""; shift ;;
+        100) info "Continue." "The server has received the request headers and the client should proceed to send the request body."; shift ;;
+        101) info "Switching Protocols." "The requester has asked the server to switch protocols and the server has agreed to do so."; shift ;;
+        102) info "Processing." "This code indicates that the server has received and is processing the request, but no response is available yet."; shift ;;
         # success
-        200) echo ""; shift ;;
-        201) echo ""; shift ;;
-        202) echo ""; shift ;;
-        203) echo ""; shift ;;
-        204) echo ""; shift ;;
-        205) echo ""; shift ;;
-        206) echo ""; shift ;;
-        207) echo ""; shift ;;
-        208) echo ""; shift ;;
-        226) echo ""; shift ;;
+        200) info "" ""; shift ;;
+        201) info "" ""; shift ;;
+        202) info "" ""; shift ;;
+        203) info "" ""; shift ;;
+        204) info "" ""; shift ;;
+        205) info "" ""; shift ;;
+        206) info "" ""; shift ;;
+        207) info "" ""; shift ;;
+        208) info "" ""; shift ;;
+        226) info "" ""; shift ;;
         # redirection
-        300) echo ""; shift ;;
-        301) echo ""; shift ;;
-        302) echo ""; shift ;;
-        303) echo ""; shift ;;
-        304) echo ""; shift ;;
-        305) echo ""; shift ;;
-        306) echo ""; shift ;;
-        307) echo ""; shift ;;
-        308) echo ""; shift ;;
+        300) info "" ""; shift ;;
+        301) info "" ""; shift ;;
+        302) info "" ""; shift ;;
+        303) info "" ""; shift ;;
+        304) info "" ""; shift ;;
+        305) info "" ""; shift ;;
+        306) info "" ""; shift ;;
+        307) info "" ""; shift ;;
+        308) info "" ""; shift ;;
         # client error
-        400) echo ""; shift ;;
-        401) echo ""; shift ;;
-        402) echo ""; shift ;;
-        403) echo ""; shift ;;
-        404) echo ""; shift ;;
-        405) echo ""; shift ;;
-        406) echo ""; shift ;;
-        407) echo ""; shift ;;
-        408) echo ""; shift ;;
-        409) echo ""; shift ;;
-        410) echo ""; shift ;;
-        411) echo ""; shift ;;
-        412) echo ""; shift ;;
-        413) echo ""; shift ;;
-        414) echo ""; shift ;;
-        415) echo ""; shift ;;
-        416) echo ""; shift ;;
-        417) echo ""; shift ;;
-        418) echo ""; shift ;;
-        421) echo ""; shift ;;
-        422) echo ""; shift ;;
-        423) echo ""; shift ;;
-        424) echo ""; shift ;;
-        426) echo ""; shift ;;
-        428) echo ""; shift ;;
-        429) echo ""; shift ;;
-        431) echo ""; shift ;;
-        451) echo ""; shift ;;
+        400) info "" ""; shift ;;
+        401) info "" ""; shift ;;
+        402) info "" ""; shift ;;
+        403) info "" ""; shift ;;
+        404) info "" ""; shift ;;
+        405) info "" ""; shift ;;
+        406) info "" ""; shift ;;
+        407) info "" ""; shift ;;
+        408) info "" ""; shift ;;
+        409) info "" ""; shift ;;
+        410) info "" ""; shift ;;
+        411) info "" ""; shift ;;
+        412) info "" ""; shift ;;
+        413) info "" ""; shift ;;
+        414) info "" ""; shift ;;
+        415) info "" ""; shift ;;
+        416) info "" ""; shift ;;
+        417) info "" ""; shift ;;
+        418) info "" ""; shift ;;
+        421) info "" ""; shift ;;
+        422) info "" ""; shift ;;
+        423) info "" ""; shift ;;
+        424) info "" ""; shift ;;
+        426) info "" ""; shift ;;
+        428) info "" ""; shift ;;
+        429) info "" ""; shift ;;
+        431) info "" ""; shift ;;
+        451) info "" ""; shift ;;
         # server error
-        500) echo ""; shift ;;
-        501) echo ""; shift ;;
-        502) echo ""; shift ;;
-        503) echo ""; shift ;;
-        504) echo ""; shift ;;
-        506) echo ""; shift ;;
-        507) echo ""; shift ;;
-        508) echo ""; shift ;;
-        510) echo ""; shift ;;
-        511) echo ""; shift ;;
+        500) info "" ""; shift ;;
+        501) info "" ""; shift ;;
+        502) info "" ""; shift ;;
+        503) info "" ""; shift ;;
+        504) info "" ""; shift ;;
+        506) info "" ""; shift ;;
+        507) info "" ""; shift ;;
+        508) info "" ""; shift ;;
+        510) info "" ""; shift ;;
+        511) info "" ""; shift ;;
         # unofficial codes
         # restful codes
         # internet information services
