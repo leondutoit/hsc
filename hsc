@@ -9,9 +9,9 @@ fi
 
 help_text="\
 
-    hsc - a helper providing useful info about HTTP status.
+    hsc - a helper providing useful info about HTTP status codes.
 
-    Based on information from: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+    Based on https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 
     Usage: hsc [code]
 
@@ -28,18 +28,18 @@ while (( "$#" )); do
         # informational
         100) info "Continue." "The server has received the request headers and the client should proceed to send the request body."; shift ;;
         101) info "Switching Protocols." "The requester has asked the server to switch protocols and the server has agreed to do so."; shift ;;
-        102) info "Processing." "This code indicates that the server has received and is processing the request, but no response is available yet."; shift ;;
+        102) info "Processing. WebDav." "This code indicates that the server has received and is processing the request, but no response is available yet."; shift ;;
         # success
-        200) info "" ""; shift ;;
-        201) info "" ""; shift ;;
-        202) info "" ""; shift ;;
-        203) info "" ""; shift ;;
-        204) info "" ""; shift ;;
-        205) info "" ""; shift ;;
-        206) info "" ""; shift ;;
-        207) info "" ""; shift ;;
-        208) info "" ""; shift ;;
-        226) info "" ""; shift ;;
+        200) info "OK." "Standard response for successful HTTP requests."; shift ;;
+        201) info "Created." "The request has been fulfilled, resulting in the creation of a new resource."; shift ;;
+        202) info "Accepted." "The request has been accepted for processing, but the processing has not been completed."; shift ;;
+        203) info "Non-Authoritative Information." "The server is a transforming proxy that received a 200 OK from its origin, but is returning a modified version of the origin's response."; shift ;;
+        204) info "No Content." "The server successfully processed the request and is not returning any content."; shift ;;
+        205) info "Reset Content." "Success, no content returned, but unlike a 204 response, this response requires that the requester reset the document view."; shift ;;
+        206) info "Partial Content." "The server is delivering only part of the resource due to a range header sent by the client."; shift ;;
+        207) info "Multi-Status. WebDav." "The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made."; shift ;;
+        208) info "Already Supported. WebDav." "The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again."; shift ;;
+        226) info "IM Used." "The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance."; shift ;;
         # redirection
         300) info "" ""; shift ;;
         301) info "" ""; shift ;;
