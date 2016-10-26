@@ -49,7 +49,7 @@ while (( "$#" )); do
         305) info "305 - Use Proxy." "The requested resource is available only through a proxy, the address for which is provided in the response."; shift ;;
         306) info "306 - Switch Proxy." "No longer used. Originally meant 'Subsequent requests should use the specified proxy'."; shift ;;
         307) info "307 - Temporary Redirect." "In this case, the request should be repeated with another URI; however, future requests should still use the original URI."; shift ;;
-        308) info "308 - Permanent Redirect." "The request and all future requests should be repeated using another URI. 307 and 308 parallel the behaviors of 302 and 301, but do not allow the HTTP method to change. So, for example, submitting a form to a permanently redirected resource may continue smoothly."; shift ;;
+        308) info "308 - Permanent Redirect." "The request and all future requests should be repeated using another URI. Does not allow the HTTP method to change, so submitting a form may continue smoothly."; shift ;;
         # client error
         400) info "" ""; shift ;;
         401) info "" ""; shift ;;
