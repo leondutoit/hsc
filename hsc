@@ -80,16 +80,17 @@ while (( "$#" )); do
         431) info "431 - Request Header Fields Too Large." "The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large."; shift ;;
         451) info "451 - Unavailable For Legal Reasons." "A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource. Reference to the novel Farenheit 451."; shift ;;
         # server error
-        500) info "" ""; shift ;;
-        501) info "" ""; shift ;;
-        502) info "" ""; shift ;;
-        503) info "" ""; shift ;;
-        504) info "" ""; shift ;;
-        506) info "" ""; shift ;;
-        507) info "" ""; shift ;;
-        508) info "" ""; shift ;;
-        510) info "" ""; shift ;;
-        511) info "" ""; shift ;;
+        500) info "500 - Internal Server Error." "A generic error message, given when an unexpected condition was encountered and no more specific message is suitable."; shift ;;
+        501) info "501 - Not Implemented." "The server either does not recognize the request method, or it lacks the ability to fulfill the request. Usually this implies future availability."; shift ;;
+        502) info "502 - Bad Gateway." "The server was acting as a gateway or proxy and received an invalid response from the upstream server."; shift ;;
+        503) info "503 - Service Unavailable." "The server is currently unavailable (because it is overloaded or down for maintenance)."; shift ;;
+        504) info "504 - Gateway Timeout." "The server was acting as a gateway or proxy and did not receive a timely response from the upstream server."; shift ;;
+        505) info "505 - HTTP Version Not Supported." "The server does not support the HTTP protocol version used in the request."
+        506) info "506" "Transparent content negotiation for the request results in a circular reference."; shift ;;
+        507) info "507 - Insufficient Storage. WebDav." "The server is unable to store the representation needed to complete the request."; shift ;;
+        508) info "508 - Loop Detected. WebDav." "The server detected an infinite loop while processing the request."; shift ;;
+        510) info "510 - Not Extended." "Further extensions to the request are required for the server to fulfill it."; shift ;;
+        511) info "511 - Network Authentication Required." "The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network."; shift ;;
         # unofficial codes
         # restful codes
         # internet information services
