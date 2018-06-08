@@ -85,7 +85,7 @@ while (( "$#" )); do
         502) info "502 - Bad Gateway." "The server was acting as a gateway or proxy and received an invalid response from the upstream server."; shift ;;
         503) info "503 - Service Unavailable." "The server is currently unavailable (because it is overloaded or down for maintenance)."; shift ;;
         504) info "504 - Gateway Timeout." "The server was acting as a gateway or proxy and did not receive a timely response from the upstream server."; shift ;;
-        505) info "505 - HTTP Version Not Supported." "The server does not support the HTTP protocol version used in the request."
+        505) info "505 - HTTP Version Not Supported." "The server does not support the HTTP protocol version used in the request."; shift ;;
         506) info "506" "Transparent content negotiation for the request results in a circular reference."; shift ;;
         507) info "507 - Insufficient Storage. WebDav." "The server is unable to store the representation needed to complete the request."; shift ;;
         508) info "508 - Loop Detected. WebDav." "The server detected an infinite loop while processing the request."; shift ;;
